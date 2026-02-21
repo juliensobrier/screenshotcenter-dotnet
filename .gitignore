@@ -1,0 +1,12 @@
+bin/
+obj/
+*.user
+.vs/
+*.suo
+packages/
+.nuget/
+*.nupkg
+*.snupkg
+TestResults/
+coverage/
+.env

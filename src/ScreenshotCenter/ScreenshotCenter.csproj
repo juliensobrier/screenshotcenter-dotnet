@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>10.0</LangVersion>
+    <AssemblyName>ScreenshotCenter</AssemblyName>
+    <RootNamespace>ScreenshotCenter</RootNamespace>
+    <PackageId>ScreenshotCenter</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>ScreenshotCenter</Authors>
+    <Description>Official .NET SDK for the ScreenshotCenter API</Description>
+    <PackageProjectUrl>https://screenshotcenter.com</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>screenshot;api;web;automation;pdf</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+</Project>
