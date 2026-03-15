@@ -8,14 +8,14 @@
     <AssemblyName>ScreenshotCenter</AssemblyName>
     <RootNamespace>ScreenshotCenter</RootNamespace>
     <PackageId>ScreenshotCenter</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.2</Version>
     <Authors>ScreenshotCenter</Authors>
     <Description>Official .NET SDK for the ScreenshotCenter API</Description>
     <PackageProjectUrl>https://screenshotcenter.com</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>screenshot;api;web;automation;pdf</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PackageReadmePath>README.md</PackageReadmePath>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/juliensobrier/screenshotcenter-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
