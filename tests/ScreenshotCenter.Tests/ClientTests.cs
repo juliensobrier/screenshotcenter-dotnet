@@ -50,8 +50,7 @@ public class ClientTests
     [Fact]
     public void Constructor_SetsDefaultBaseUrl()
     {
-        using var c = new ScreenshotCenterClient("key");
-        Assert.Contains("api.screenshotcenter.com", c.Screenshot.GetType().Assembly.FullName ?? "");
+        Assert.Contains("api.screenshotcenter.com", ScreenshotCenterClient.DefaultBaseUrl);
     }
 
     [Fact]

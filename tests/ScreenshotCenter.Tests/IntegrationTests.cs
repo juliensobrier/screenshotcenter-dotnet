@@ -31,7 +31,7 @@ public class IntegrationTests : IAsyncDisposable
 
     private void SkipIfNotLive()
     {
-        if (_client is null) throw new Xunit.SkipException("SCREENSHOTCENTER_API_KEY not set");
+        Skip.If(_client is null, "SCREENSHOTCENTER_API_KEY not set");
     }
 
     private async Task<Screenshot> CreateAndWaitAsync(string url)
@@ -41,7 +41,7 @@ public class IntegrationTests : IAsyncDisposable
         return await _client.WaitForAsync(shot.Id, intervalMs: 3000, timeoutMs: 110_000);
     }
 
-    [Fact]
+    [SkippableFact]
     public async Task Account_Info()
     {
         SkipIfNotLive();
@@ -49,7 +49,7 @@ public class IntegrationTests : IAsyncDisposable
         Assert.True(info.Balance >= 0);
     }
 
-    [Fact]
+    [SkippableFact]
     public async Task Screenshot_CreateAndWait()
     {
         SkipIfNotLive();
@@ -58,7 +58,7 @@ public class IntegrationTests : IAsyncDisposable
         Assert.NotEmpty(result.Url);
     }
 
-    [Fact]
+    [SkippableFact]
     public async Task Screenshot_Info()
     {
         SkipIfNotLive();
@@ -68,7 +68,7 @@ public class IntegrationTests : IAsyncDisposable
         Assert.Equal(shot.Id, info.Id);
     }
 
-    [Fact]
+    [SkippableFact]
     public async Task Screenshot_List()
     {
         SkipIfNotLive();
@@ -77,7 +77,7 @@ public class IntegrationTests : IAsyncDisposable
         Assert.NotNull(list);
     }
 
-    [Fact]
+    [SkippableFact]
     public async Task Screenshot_SaveImage()
     {
         SkipIfNotLive();
@@ -88,7 +88,7 @@ public class IntegrationTests : IAsyncDisposable
         File.Delete(path);
     }
 
-    [Fact]
+    [SkippableFact]
     public async Task InvalidApiKey_Throws()
     {
         SkipIfNotLive();
@@ -98,7 +98,7 @@ public class IntegrationTests : IAsyncDisposable
         await Assert.ThrowsAsync<ApiException>(() => bad.Account.InfoAsync());
     }
 
-    [Fact]
+    [SkippableFact]
     public async Task Batch_CreateAndWait()
     {
         // Requires batch worker service to be running
