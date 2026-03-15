@@ -15,6 +15,13 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>screenshot;api;web;automation;pdf</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageReadmePath>README.md</PackageReadmePath>
+    <RepositoryUrl>https://github.com/juliensobrier/screenshotcenter-dotnet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
 </Project>
